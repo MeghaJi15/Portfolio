@@ -1,0 +1,268 @@
+.skills-section {
+  width: 100%;
+  padding: 96px 0;
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.skills-layout {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 48px;
+  align-items: stretch;
+}
+
+.skill-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.skill-card {
+  padding: 24px 32px;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(19, 27, 46, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: 0.2s ease;
+}
+
+.skill-card:hover {
+  box-shadow: 0 10px 24px rgba(19, 27, 46, 0.08);
+}
+
+.skill-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.skill-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  color: #b80035;
+  background: #ffdada;
+}
+
+.backend .skill-icon {
+  background: #e2e7ff;
+}
+
+.tools .skill-icon {
+  background: #ffdadb;
+}
+
+.skill-title h4 {
+  margin: 0;
+  color: #131b2e;
+  font: 700 18px/26px "Plus Jakarta Sans", sans-serif;
+}
+
+.skill-title span {
+  color: #5c3f40;
+  font: 400 13px/20px "Inter", sans-serif;
+}
+
+.skill-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  padding-top: 4px;
+}
+
+.skill-item {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px;
+  border-radius: 10px;
+  background: rgba(242, 243, 255, 0.7);
+  color: #131b2e;
+  font: 500 14px/20px "Inter", sans-serif;
+}
+
+.skill-item .material-symbols-outlined {
+  color: #b80035;
+  font-size: 18px;
+}
+
+.skill-item.highlight {
+  color: #b80035;
+  background: rgba(255, 218, 218, 0.5);
+  font-weight: 700;
+}
+
+.terminal {
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+  padding: 32px;
+  border-radius: 24px;
+  background: #283044;
+  color: #eef0ff;
+  box-shadow: 0 20px 45px rgba(19, 27, 46, 0.14);
+  font-family: monospace;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.terminal-glow {
+  position: absolute;
+  top: -64px;
+  right: -64px;
+  width: 192px;
+  height: 192px;
+  border-radius: 50%;
+  background: rgba(184, 0, 53, 0.2);
+  filter: blur(32px);
+  pointer-events: none;
+}
+
+.terminal-header,
+.terminal-footer {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.terminal-header {
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  color: #e5bdbe;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.terminal-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.terminal-dots span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.terminal-dots span:nth-child(1) { background: #ef4444; }
+.terminal-dots span:nth-child(2) { background: #eab308; }
+.terminal-dots span:nth-child(3) { background: #22c55e; }
+
+.code-content {
+  position: relative;
+  z-index: 1;
+  padding: 16px 0;
+  color: #eef0ff;
+  font: 500 13px/1.85 monospace;
+}
+
+.code-content em {
+  color: #e11d48;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.code-content b {
+  color: #ffb3b6;
+}
+
+.code-content label {
+  color: #e5bdbe;
+}
+
+.code-content strong {
+  color: #ffb2b7;
+  font-weight: 500;
+}
+
+.code-content mark {
+  padding: 0;
+  background: transparent;
+  color: #ffdada;
+}
+
+.code-content .indent {
+  padding-left: 16px;
+}
+
+.code-content .indent-2 {
+  padding-left: 32px;
+  color: #ffdaaa;
+}
+
+.code-content .return-line {
+  color: #ffb2b7;
+}
+
+.code-content .comment {
+  padding-top: 8px;
+  color: #e5bdbe;
+  font-weight: 500;
+}
+
+.terminal-footer {
+  padding-top: 16px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  color: #ffb3b6;
+  font: 400 13px/20px "Inter", sans-serif;
+}
+
+.terminal-footer > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.terminal-footer .material-symbols-outlined {
+  font-size: 18px;
+}
+
+.terminal-footer b {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: #e11d48;
+  color: #fff;
+  font: 700 12px monospace;
+}
+
+@media (max-width: 991px) {
+  .skills-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .terminal {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .skills-section {
+    padding: 64px 0;
+  }
+
+  .skill-card,
+  .terminal {
+    padding: 20px;
+  }
+
+  .skill-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

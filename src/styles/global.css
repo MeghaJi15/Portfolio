@@ -1,0 +1,80 @@
+@layer reset, base, components;
+
+:root {
+  font-family: "Inter", sans-serif;
+  color: #131b2e;
+  background: #faf8ff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+
+  --primary: #b80035;
+  --primary-container: #e11d48;
+  --secondary-container: #db2e4e;
+  --surface: #faf8ff;
+  --surface-low: #f2f3ff;
+  --surface-high: #e2e7ff;
+  --surface-highest: #dae2fd;
+  --text: #131b2e;
+  --muted: #5c3f40;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--surface);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.material-symbols-outlined {
+  font-family: "Material Symbols Outlined";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  width: min(1200px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.site-main {
+  width: 100%;
+  min-height: calc(100vh - 140px);
+  padding-top: 80px;
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: min(100% - 32px, 1200px);
+  }
+
+  .site-main {
+    padding-top: 72px;
+  }
+}

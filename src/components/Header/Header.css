@@ -1,0 +1,164 @@
+.header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 1000;
+  width: 100%;
+  background: rgba(250, 248, 255, 0.86);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
+}
+
+.header-inner {
+  max-width: 1200px;
+  height: 80px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #131b2e;
+  text-decoration: none;
+}
+
+.brand-code {
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: #eaedff;
+  color: #b80035;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.brand:hover .brand-code {
+  background: #b80035;
+  color: #fff;
+}
+
+.brand-name {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav a {
+  color: #5c3f40;
+  text-decoration: none;
+  font: 600 14px/20px "Inter", sans-serif;
+  transition: color 0.2s ease;
+}
+
+.nav a:hover,
+.nav a.active {
+  color: #b80035;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.resume-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 24px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #e11d48, #db2e4e, #b80035);
+  color: #fff;
+  text-decoration: none;
+  font: 600 14px/20px "Inter", sans-serif;
+  box-shadow: 0 10px 20px -3px rgba(225, 29, 72, 0.35);
+  transition: 0.2s ease;
+}
+
+.resume-btn:hover {
+  opacity: 0.95;
+  transform: scale(1.02);
+}
+
+.profile-icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #b80035;
+  color: #fff;
+}
+
+.profile-icon .material-symbols-outlined {
+  font-size: 18px;
+}
+
+.menu-btn {
+  display: none;
+  border: 0;
+  background: transparent;
+  color: #131b2e;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .header-inner {
+    height: 72px;
+    padding: 0 16px;
+  }
+
+  .desktop-resume {
+    display: none;
+  }
+
+  .menu-btn {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+  }
+
+  .nav {
+    position: absolute;
+    top: 72px;
+    left: 16px;
+    right: 16px;
+    padding: 18px;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 18px 45px rgba(19, 27, 46, 0.12);
+  }
+
+  .nav.nav-open {
+    display: flex;
+  }
+
+  .nav a {
+    padding: 12px;
+    border-radius: 10px;
+  }
+
+  .nav a:hover,
+  .nav a.active {
+    background: #f2f3ff;
+  }
+}
