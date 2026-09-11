@@ -40,9 +40,9 @@ function Hero() {
               <span className="material-symbols-outlined">download</span>
               Download Resume
             </a>
-            <a className="secondary-btn" href="#projects">
-              <span className="material-symbols-outlined">terminal</span>
-              View Projects
+            <a className="secondary-btn" href="/Megha_V_More_Portfolio.pdf" download>
+              <span className="material-symbols-outlined">download</span>
+              Download Portfolio
             </a>
           </div>
 
